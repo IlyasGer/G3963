@@ -53,12 +53,14 @@ void Print2DArr(double[,] arr)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
+
             Console.ForegroundColor = (ConsoleColor)(new System.Random().Next(0,16));
-            Console.Write(arr[i, j] + "  \t  ");
+            Console.Write(arr[i, j]  + "  \t  ");            
             Console.ResetColor();
         }
         Console.WriteLine("");
     }
+    // Console.WriteLine("Console.ForegroundColor = (ConsoleColor)(new System.Random().Next(0,16));");
 }
 
 //  Получение данных от пользователя
@@ -70,3 +72,4 @@ double[,] arr2D = Gen2DArray(n, m);
 
 //  Печатаем двумерный массив
 Print2DArr(arr2D);
+Console.WriteLine("");
